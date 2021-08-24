@@ -845,6 +845,8 @@ menu "Perl libraries/modules"
 	source "package/perl-xml-namespacesupport/Config.in"
 	source "package/perl-xml-sax/Config.in"
 	source "package/perl-xml-sax-base/Config.in"
+	source "package/perl-xml-parser/Config.in"
+	source "package/perl-xml-twig/Config.in"
 endmenu
 endif
 	source "package/php/Config.in"
@@ -1268,6 +1270,12 @@ menu "External python modules"
 	source "package/python-zc-lockfile/Config.in"
 	source "package/python-zeroconf/Config.in"
 	source "package/python-zope-interface/Config.in"
+	menu "Greenbone Stuff"
+		source "package/python-gvm/Config.in"
+		source "package/python-gvm-tools/Config.in"
+		source "package/python-ospd/Config.in"
+		source "package/python-ospd-openvas/Config.in"
+	endmenu
 endmenu
 endif
 	source "package/quickjs/Config.in"

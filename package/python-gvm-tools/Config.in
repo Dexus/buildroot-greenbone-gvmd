@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_GVM_TOOLS
+	bool "python-gvm-tools"
+	select BR2_PACKAGE_PYTHON_GVM # runtime
+	help
+	  Tools to control a GSM/GVM over GMP or OSP.
+
+	  https://github.com/greenbone/gvm-tools/

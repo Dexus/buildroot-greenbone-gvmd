@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PYTHON_GVM
+	bool "python-gvm"
+	select BR2_PACKAGE_PYTHON_DEFUSEDXML # runtime
+	select BR2_PACKAGE_PYTHON_LXML # runtime
+	select BR2_PACKAGE_PYTHON_PARAMIKO # runtime
+	help
+	  Library to communicate with remote servers over GMP or OSP.
+
+	  https://github.com/greenbone/python-gvm

@@ -1,0 +1,11 @@
+config BR2_PACKAGE_PERL_XML_TWIG
+	bool "perl-xml-twig"
+	depends on !BR2_STATIC_LIBS
+	select BR2_PACKAGE_PERL_XML_PARSER # runtime
+	help
+	  XML, The Perl Way.
+
+	  https://metacpan.org/release/XML-Twig
+
+comment "perl-xml-twig needs a toolchain w/ dynamic library"
+	depends on BR2_STATIC_LIBS

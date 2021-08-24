@@ -1,0 +1,10 @@
+config BR2_PACKAGE_PYTHON_OSPD_OPENVAS
+	bool "python-ospd-openvas"
+	select BR2_PACKAGE_PYTHON_OSPD # runtime
+	select BR2_PACKAGE_PYTHON_PACKAGING # runtime
+	select BR2_PACKAGE_PYTHON_PSUTIL # runtime
+	select BR2_PACKAGE_PYTHON_REDIS # runtime
+	help
+	  ospd based scanner for openvas.
+
+	  https://github.com/greenbone/ospd-openvas

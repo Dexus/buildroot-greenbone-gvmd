@@ -1,0 +1,12 @@
+config BR2_PACKAGE_PYTHON_OSPD
+	bool "python-ospd"
+	select BR2_PACKAGE_PYTHON_DEFUSEDXML # runtime
+	select BR2_PACKAGE_PYTHON_DEPRECATED # runtime
+	select BR2_PACKAGE_PYTHON_LXML # runtime
+	select BR2_PACKAGE_PYTHON_PARAMIKO # runtime
+	select BR2_PACKAGE_PYTHON_PSUTIL # runtime
+	help
+	  OSPD is a base for scanner wrappers which share the same
+	  communication protocol: OSP (Open Scanner Protocol).
+
+	  https://github.com/greenbone/ospd

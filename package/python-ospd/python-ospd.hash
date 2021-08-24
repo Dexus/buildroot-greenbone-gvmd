@@ -1,0 +1,5 @@
+# md5, sha256 from https://pypi.org/pypi/ospd/json
+md5  cb97c044e8b156cadb874fab3c78dbbd  ospd-21.4.3.tar.gz
+sha256  54f81cb618662b4c0bb8e2d1552b5e770206777c4bd1bfa05004f2cb05999789  ospd-21.4.3.tar.gz
+# Locally computed sha256 checksums
+sha256  7ab1e34881bc2916f942c72497d7c9b3fd427297aa3bf364c8995319e0c6c321  COPYING
