@@ -1,0 +1,6 @@
+config BR2_PACKAGE_HOST_HEIMDAL
+	bool "host heimdal"
+	help
+	  Heimdal Kerberos and Security Software
+	  
+	  https://github.com/heimdal/

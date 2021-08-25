@@ -1,0 +1,11 @@
+--- gvmd-v21.4.3/src/sql_pg.c	2021-08-03 16:28:47.000000000 +0200
++++ gvmd-v21.4.3.patch/src/sql_pg.c	2021-08-24 10:20:38.358416031 +0200
+@@ -32,7 +32,7 @@
+ #include <glib.h>
+ #include <inttypes.h>
+ #include <netinet/in.h>
+-#include <postgresql/libpq-fe.h>
++#include <libpq-fe.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 

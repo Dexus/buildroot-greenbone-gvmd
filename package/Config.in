@@ -2532,4 +2532,16 @@ menu "Text editors and viewers"
 	source "package/vim/Config.in"
 endmenu
 
+
+menu "!!Greenbone Stuff"
+		source "package/python-gvm/Config.in"
+		source "package/python-gvm-tools/Config.in"
+		source "package/python-ospd/Config.in"
+		source "package/python-ospd-openvas/Config.in"
+		source "package/gsa/Config.in"
+		source "package/gvm-libs/Config.in"
+		source "package/gvmd/Config.in"
+		source "package/openvas-scanner/Config.in"
+		source "package/openvas-smb/Config.in"
+	endmenu
 endmenu

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GREENBONE_OPENVAS_SMB
+    bool "openvas-smb"
+    depends on BR2_PACKAGE_GREENBONE_OPENVAS_SCANNER
+    help
+      openvas-smb package

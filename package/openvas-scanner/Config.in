@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GREENBONE_OPENVAS_SCANNER
+    bool "openvas-scanner"
+    depends on BR2_PACKAGE_GREENBONE_GVM_LIBS
+    help
+      openvas-scanner package

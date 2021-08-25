@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GREENBONE_GVMD
+    bool "gvmd"
+    depends on BR2_PACKAGE_GREENBONE_GVM_LIBS
+    help
+      GVMD package

@@ -1,0 +1,33 @@
+--- gvm-libs-v21.4.2/boreas/CMakeLists.txt	2021-08-03 13:50:41.000000000 +0200
++++ gvm-libs-v21.4.2.patched/boreas/CMakeLists.txt	2021-08-24 09:52:28.099799562 +0200
+@@ -24,28 +24,8 @@
+ 
+ ## Dependency checks
+ 
+-message (STATUS "Looking for libnet...")
+-find_library (NET net)
+-message (STATUS "Looking for net... ${NET}")
+-if (NOT NET)
+-  message (SEND_ERROR "The net library is required.")
+-endif (NOT NET)
+-message (STATUS "Looking for libnet-config...")
+-find_program (LIBNET_CONFIG libnet-config)
+-
+-if (LIBNET_CONFIG)
+-  message (STATUS "Looking for libnet-config... ${LIBNET_CONFIG}")
+-  execute_process (COMMAND libnet-config --libs
+-    OUTPUT_VARIABLE LIBNET_LDFLAGS
+-    OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  execute_process (COMMAND libnet-config --cflags
+-    OUTPUT_VARIABLE LIBNET_CFLAGS
+-    OUTPUT_STRIP_TRAILING_WHITESPACE)
+-else (LIBNET_CONFIG)
+-  message (STATUS "libnet-config not found, using defaults...")
+-  set (LIBNET_LDFLAGS "-L/usr/lib -lnet")
+-  set (LIBNET_CFLAGS "-I/usr/include")
+-endif (LIBNET_CONFIG)
++# LIBNET
++pkg_check_modules (LIBNET REQUIRED libnet>=1.0)
+ 
+ message (STATUS "Looking for pcap...")
+ find_library (PCAP pcap)

@@ -1,0 +1,10 @@
+config BR2_PACKAGE_GREENBONE_GSA
+    bool "gsa"
+    depends on BR2_PACKAGE_GREENBONE_GVM_LIBS
+    select BR2_PACKAGE_LIBXML2
+    select BR2_PACKAGE_GNUTLS
+    select BR2_PACKAGE_LIBMICROHTTPD
+    select BR2_PACKAGE_LIBGCRYPT
+    select BR2_PACKAGE_LIBGLIB2
+    help
+      Greenbone Security Assistant package

@@ -1,0 +1,24 @@
+--- gvmd-v21.4.3/src/CMakeLists.txt	2021-08-03 16:28:47.000000000 +0200
++++ gvmd-v21.4.3.patch/src/CMakeLists.txt	2021-08-24 11:28:11.686132946 +0200
+@@ -69,19 +69,8 @@
+   message (STATUS "Looking for xsltproc... ${XSLTPROC_EXECUTABLE}")
+ endif (NOT XSLTPROC_EXECUTABLE)
+ 
+-message (STATUS "Looking for gpgme...")
+-find_library (GPGME gpgme)
+-if (NOT GPGME)
+-  message (SEND_ERROR "The gpgme library is required.")
+-else (NOT GPGME)
+-  message (STATUS "Looking for gpgme... ${GPGME}")
+-  execute_process (COMMAND gpgme-config --cflags
+-    OUTPUT_VARIABLE GPGME_CFLAGS
+-    OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  execute_process (COMMAND gpgme-config --libs
+-    OUTPUT_VARIABLE GPGME_LDFLAGS
+-    OUTPUT_STRIP_TRAILING_WHITESPACE)
+-endif (NOT GPGME)
++# gpgme
++pkg_check_modules (GPGME REQUIRED gpgme>=1.7.0)
+ 
+ include_directories (${LIBGVM_GMP_INCLUDE_DIRS}
+                      ${LIBGVM_BASE_INCLUDE_DIRS} ${LIBGVM_UTIL_INCLUDE_DIRS}
